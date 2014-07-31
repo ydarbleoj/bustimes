@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bustimes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/bustimes.css">
+  </head>
+  <body>
+    <script>
+      window.BustimesENV = {{ENV}};
+      window.EmberENV = window.BustimesENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/bustimes.js"></script>
+    <script>
+      window.Bustimes = require('bustimes/app')['default'].create(BustimesENV.APP);
+    </script>
+  </body>
+</html>
